@@ -1,45 +1,67 @@
 fn main() {
 
-    //Boolean
-    let _first_bool = true;//Thue undescore is used to avoid warning of unused variable
-    let _second_bool = false;
+    let sum = add(3, 5);
+    println!("The sum is: {}", sum);
 
-    //Integer
-    let _weekdays: i8 = 7;
-    let _number_of_users: i64 = 128000;
-    let _number_of_tokens: u64 = 10000; // unsigned integer
-    let _just_a_number  = 0;// will default to i32
+    let day_of_week = "Sunday";
+    if day_of_week == "Sunday" {
+        println!("Race day");
+    } else if day_of_week == "Saturday" {
+        println!("Qualifying day");
+    } else {
+        println!("Rest day");
+    }
 
-    //Floating point
-    let _pi: f32 = 3.14;
+    let mut counter = 0;
 
-    //Character
-    let _my_char: char = 'A';
+    while counter <= 5 {
+        println!("Counter value is {}", counter);
+        counter += 1;
+    }
 
-    //String
-    let _message = "Hello, test!";//string slice
-    let _my_string = String::from("Hello, test!");//String
+    for number in 1..=5{
+        println!{"Number is {}", number};
+    }
 
-    //Array
-    let _days_of_week: [&str; 7] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let _first_element = _days_of_week[0];
-    let _last_element = _days_of_week[_days_of_week.len() - 1];
+    counter = 0;
+    loop {
+        println!("Counter value is {}", counter);
+        counter +=1;
+        if counter == 6 {
+            break;
+        }
+    }
 
-    //Slice
-    let slice = &_days_of_week[0..3];
-    let _first_element = slice[0];
+    let num = 5;
+    match num {
+        1 => {
+            println!("It's one");
+            println!{"First stuff"};
+        }
+        2 => println!("It's two"),
+        3 => println!("It's three"),
+        _ => println!("It's something else"),
+    }
 
-    //tuple
-    let person = ("James", "Bond", 7);
-    let _first_name = person.0;
-    let _age = person.2;
+    let result = match num {
+        1 => "One",
+        2 => "Two",
+        3 => "Three",
+        _ => "Something else",
+    };
 
-    //Unit type
-    let _unit_type = ();
+    println!("Result is {}", result);
 
-    //variables
-    let mut num = 5;
-    num = 6;
+    }
 
 
+fn add(x: i32, y: i32) -> i32 {
+    let result = x + y;
+    return result;
 }
+
+fn no_param() -> i32 {
+    println!("It works!");
+    1
+}
+ 
