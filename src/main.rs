@@ -1,31 +1,45 @@
 fn main() {
-    let message = "Hello, World!";
 
-    let x: i32 = 42;
-    let pi: f64 = 3.14159;
-    let is_rust_cool: bool = true;
-    let letter_a: char = 'a';
+    //Boolean
+    let _first_bool = true;//Thue undescore is used to avoid warning of unused variable
+    let _second_bool = false;
 
-    fn add(x: i32, y: i32) -> i32{
-        //x + y // no semicolon to mean return 
-        return x + y;
-    }
+    //Integer
+    let _weekdays: i8 = 7;
+    let _number_of_users: i64 = 128000;
+    let _number_of_tokens: u64 = 10000; // unsigned integer
+    let _just_a_number  = 0;// will default to i32
 
-    let x = 42;//shadowing (redefining a variable)
+    //Floating point
+    let _pi: f32 = 3.14;
 
-    if x > 0 {
-        println!("x is positive");
-    } else if x < 0 {
-        println!("x is negative");
-    } else {
-        println!("x is zero");
-    }
+    //Character
+    let _my_char: char = 'A';
 
-    let mut i = 1;//mutable variable (can be changed)
-    while i <= 5 {
-        println!("{}", i);
-        i += 1;
-    }
+    //String
+    let _message = "Hello, test!";//string slice
+    let _my_string = String::from("Hello, test!");//String
+
+    //Array
+    let _days_of_week: [&str; 7] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let _first_element = _days_of_week[0];
+    let _last_element = _days_of_week[_days_of_week.len() - 1];
+
+    //Slice
+    let slice = &_days_of_week[0..3];
+    let _first_element = slice[0];
+
+    //tuple
+    let person = ("James", "Bond", 7);
+    let _first_name = person.0;
+    let _age = person.2;
+
+    //Unit type
+    let _unit_type = ();
+
+    //variables
+    let mut num = 5;
+    num = 6;
 
 
 }
